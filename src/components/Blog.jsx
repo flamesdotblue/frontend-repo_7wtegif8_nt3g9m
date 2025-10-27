@@ -24,27 +24,27 @@ const posts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="py-20 sm:py-24 bg-white">
+    <section id="blog" className="py-20 sm:py-24 bg-white dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-xs text-indigo-600 ring-1 ring-indigo-200">
+          <div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-xs text-indigo-600 ring-1 ring-indigo-200 dark:bg-indigo-500/10 dark:text-indigo-300 dark:ring-indigo-500/20">
             <Newspaper className="h-3.5 w-3.5" /> Blog
           </div>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl" style={{ fontFamily: 'Manrope, Inter, system-ui' }}>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl dark:text-white" style={{ fontFamily: 'Manrope, Inter, system-ui' }}>
             Insights from the pastel desk
           </h2>
-          <p className="mt-3 text-slate-600">Stories on design, growth, and building trustworthy payments.</p>
+          <p className="mt-3 text-slate-600 dark:text-slate-300">Stories on design, growth, and building trustworthy payments.</p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => (
-            <article key={p.id} className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-indigo-50/40 p-6 shadow-sm transition hover:shadow-md">
-              <span className="inline-flex items-center rounded-full bg-white px-2.5 py-0.5 text-xs text-slate-700 ring-1 ring-slate-200">
+            <article key={p.id} className="group rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-indigo-50/40 p-6 shadow-sm transition hover:shadow-md dark:from-slate-900 dark:to-slate-900/40 dark:border-slate-800">
+              <span className="inline-flex items-center rounded-full bg-white px-2.5 py-0.5 text-xs text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700">
                 {p.tag}
               </span>
-              <h3 className="mt-3 text-lg font-semibold text-slate-900">{p.title}</h3>
-              <p className="mt-2 text-sm text-slate-600">{p.excerpt}</p>
-              <a href="#" className="mt-4 inline-flex items-center gap-1 text-indigo-600">
+              <h3 className="mt-3 text-lg font-semibold text-slate-900 dark:text-slate-100">{p.title}</h3>
+              <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{p.excerpt}</p>
+              <a href="#" className="mt-4 inline-flex items-center gap-1 text-indigo-600 dark:text-indigo-400">
                 Read more <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
               </a>
             </article>
